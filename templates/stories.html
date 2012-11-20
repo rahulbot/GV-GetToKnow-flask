@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ country }}{% endblock %}
+
+{% block country_input %}{{ country_name }}{% endblock %}
+
+{% block content %}
+
+<div class="row" id="gv-stories">
+
+	{% for story in stories %}
+
+		<div class="span4 gv-story">
+			<div class="well">
+			    <h2><a href="{{ story['link'] }}">{{ story['title'] }}</a></h2>
+			    <i>{{ story['title'] }}</i>
+			    <p>{{ story['contentSnippet'] }}</p>
+			</div>
+		</div>
+
+	{% endfor %}
+
+</div>    
+
+{% endblock %}
