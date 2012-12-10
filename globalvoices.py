@@ -1,11 +1,15 @@
+import os
 import json
 import feedparser
 import urllib
 from urllib2 import urlopen
 import HTMLParser
 
+# figure out what dir we are in (needed to load other files when deploying to a server)
+basedir = os.path.dirname(os.path.abspath(__file__))
+
 # read in mapping of country names to paths to RSS feeds on the Global Voices server
-f = open('globalvoices-countrypaths.json', 'r')
+f = open(basedir+'globalvoices-countrypaths.json', 'r')
 path_lookup = json.loads(f.read())
 
 def recent_stories_from(country):
