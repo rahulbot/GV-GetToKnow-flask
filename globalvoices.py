@@ -5,7 +5,7 @@ from urllib2 import urlopen
 import HTMLParser
 
 # read in mapping of country names to paths to RSS feeds on the Global Voices server
-f = open('data/gv_country_paths.json', 'r')
+f = open('globalvoices-countrypaths.json', 'r')
 path_lookup = json.loads(f.read())
 
 def recent_stories_from(country):
