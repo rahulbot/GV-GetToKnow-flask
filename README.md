@@ -21,7 +21,7 @@ Use
 Run this command and then visit `localhost:5000` with a web browser
 
 ```
-python get-to-know.py
+python gettoknow.py
 ```
 
 Deploying
